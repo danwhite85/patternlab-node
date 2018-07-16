@@ -69,6 +69,13 @@
     }
   },
   "patternExtension": "mustache",
+  "patternStates": {
+    "default": "#02A4D5",
+    "inprogress": "#02A4D5",
+    "inreview": "#C7A118",
+    "complete": "#03790F",
+    "deprecated": "#B00B02"
+  },
   "patternStateCascade": ["inprogress", "inreview", "complete"],
   "patternExportDirectory": "./pattern_exports/",
   "patternExportPatternPartials": [],
