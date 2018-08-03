@@ -167,6 +167,11 @@ module.exports = function(relPath, patternlab) {
   //look for a markdown file for this template
   readDocumentation(currentPattern, patternlab);
 
+  //get pattern state from config
+  if (currentPattern.patternStateName.length > 0) {
+    currentPattern.patternState = currentPattern.getPatternState(patternlab);
+  }
+
   //add the raw template to memory
   const templatePath = path.resolve(patternsPath, currentPattern.relPath);
 

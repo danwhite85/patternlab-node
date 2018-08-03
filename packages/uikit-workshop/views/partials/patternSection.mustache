@@ -3,11 +3,12 @@
 	<div class="pl-c-pattern__header">
 
 		<h3 class="pl-c-pattern__title">
-				
+
 			<a href="../../patterns/{{ patternLink }}" class="pl-c-pattern__title-link patternLink" data-patternpartial="{{ patternPartial }}" title="Link to Pattern">
 				{{ patternName }}
-				
+
 				{{# patternState }}
+				<p>{{ patternState.name }} - {{ patternState.color }}</p>
 				<span class="pl-c-pattern-state pl-c-pattern-state--{{ patternState }}" title="{{ patternState }}"></span>
 				{{/ patternState }}
 
@@ -18,9 +19,9 @@
 		<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-{{patternPartial}}" data-patternpartial="{{ patternPartial }}" title="View Pattern Info">
 			<span class="pl-c-pattern__toggle-icon">&#9660;</span>
 		</button><!--end pl-c-pattern__extra-toggle-->
-		
+
 	</div><!--end pl-c-pattern__header-->
-  
+
 	<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-{{ patternPartial }}">
     </div><!--end pl-c-pattern__extra-->
 

@@ -34,7 +34,7 @@ module.exports = function(pattern, patternlab) {
 
       //consider looping through all keys eventually. would need to blacklist some properties and whitelist others
       if (markdownObject.state) {
-        pattern.patternState = markdownObject.state;
+        pattern.patternStateName = markdownObject.state;
       }
       if (markdownObject.order) {
         pattern.order = markdownObject.order;

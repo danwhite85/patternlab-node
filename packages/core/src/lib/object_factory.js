@@ -89,7 +89,8 @@ const Pattern = function(relPath, data, patternlab) {
 
   this.isPattern = true;
   this.isFlatPattern = this.patternGroup === this.patternSubGroup;
-  this.patternState = '';
+  this.patternStateName = '';
+  this.patternState = {};
   this.template = '';
   this.patternPartialCode = '';
   this.lineage = [];
@@ -166,6 +167,17 @@ Pattern.prototype = {
     }
 
     return this.name + path.sep + this.name + suffix + '.html';
+  },
+
+  getPatternState: function(patternlab) {
+    const color =
+      patternlab.config.patternStates[this.patternStateName] ||
+      patternlab.config.patternStates.default;
+
+    return {
+      name: this.patternStateName,
+      color: color,
+    };
   },
 
   // the finders all delegate to the PatternEngine, which also encapsulates all
